@@ -145,17 +145,17 @@ public class CompleFiltr
 //            yy=yy+altha*(y-yy);
 //            zz=zz+altha*(z-zz);
 
-//          series.appendData(new DataPoint(graph2LastYValue, y), true, 20);
-        seriesX.appendData(new DataPoint(graph2LastXValue, x), true, 20);
+          series.appendData(new DataPoint(graph2LastYValue, y), true, 20);
+      //  seriesX.appendData(new DataPoint(graph2LastXValue, x), true, 20);
         // seriesZ.appendData(new DataPoint(graph2LastZValue, z), true, 20);
-        seriesXX.appendData(new DataPoint(graph2LastXValue, xfiltr), true, 20);
-//         seriesYY.appendData(new DataPoint(graph2LastYValue, yfiltr), true, 20);
+      ///  seriesXX.appendData(new DataPoint(graph2LastXValue, xfiltr), true, 20);
+         seriesYY.appendData(new DataPoint(graph2LastYValue, yfiltr), true, 20);
 //         seriesZZ.appendData(new DataPoint(graph2LastZValue, zfiltr), true, 20);
-          graph.addSeries(seriesX);
+//          graph.addSeries(seriesX);
 //
-          graph.addSeries(seriesXX);
-//        graph.addSeries(series);
-//        graph.addSeries(seriesYY);
+//          graph.addSeries(seriesXX);
+        graph.addSeries(series);
+        graph.addSeries(seriesYY);
         //  graph.addSeries(seriesZ);
         // graph.addSeries(seriesZZ);
     }

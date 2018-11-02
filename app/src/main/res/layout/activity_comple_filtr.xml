@@ -17,15 +17,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/com"/>
+        android:text="@string/com"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="166dp" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="128dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="503dp" />
 
 </android.support.constraint.ConstraintLayout>

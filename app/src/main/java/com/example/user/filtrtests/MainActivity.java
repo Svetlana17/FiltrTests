@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity  implements SensorEventListe
     float zz;
     public String states = "DEFAULT";
     protected float timeConstant;
-    private float altha = 0.3f;
+    private float altha = 0.09f;
     private boolean state;
     private int timer = 0;
 
@@ -165,18 +165,18 @@ public class MainActivity extends AppCompatActivity  implements SensorEventListe
         yy = yy + altha * (y - yy);
         zz = zz + altha * (z - zz);
 
-        //   series.appendData(new DataPoint(graph2LastYValue, y), true, 20);
-        //  seriesX.appendData(new DataPoint(graph2LastXValue, x), true, 20);
-        seriesZ.appendData(new DataPoint(graph2LastZValue, z), true, 20);
-        //seriesXX.appendData(new DataPoint(graph2LastXValue, xx), true, 20);
+       //   series.appendData(new DataPoint(graph2LastYValue, y), true, 20);
+          seriesX.appendData(new DataPoint(graph2LastXValue, x), true, 20);
+        //seriesZ.appendData(new DataPoint(graph2LastZValue, z), true, 20);
+        seriesXX.appendData(new DataPoint(graph2LastXValue, xx), true, 20);
         //  seriesYY.appendData(new DataPoint(graph2LastYValue, yy), true, 20);
-        seriesZZ.appendData(new DataPoint(graph2LastZValue, zz), true, 20);
-        //  graph.addSeries(seriesX);
-        // graph.addSeries(seriesXX);
-        graph.addSeries(seriesZ);
-        graph.addSeries(series);
-        graph.addSeries(seriesYY);
-        graph.addSeries(seriesZZ);
+       // seriesZZ.appendData(new DataPoint(graph2LastZValue, zz), true, 20);
+          graph.addSeries(seriesX);
+         graph.addSeries(seriesXX);
+//        graph.addSeries(seriesZ);
+//        graph.addSeries(series);
+//        graph.addSeries(seriesYY);
+//        graph.addSeries(seriesZZ);
     }
 
     private void addDataPoint(double acceleration) {
@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity  implements SensorEventListe
                 while (true) {
                     plotData = true;
                     try {
-                        Thread.sleep(10);
+                        Thread.sleep(50);
                     } catch (InterruptedException e) {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
